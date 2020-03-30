@@ -1,0 +1,10 @@
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.csprojAssemblyReference.cache
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork_UI.Properties.Resources.resources
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.csproj.GenerateResource.cache
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.csproj.CoreCompileInputs.cache
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork_UI.Form1.resources
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\bin\Debug\NeuralNetwork UI.exe.config
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\bin\Debug\NeuralNetwork UI.exe
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\bin\Debug\NeuralNetwork UI.pdb
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.exe
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.pdb
