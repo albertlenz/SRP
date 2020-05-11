@@ -8,3 +8,4 @@ C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNet
 C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\bin\Debug\NeuralNetwork UI.pdb
 C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.exe
 C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.pdb
+C:\Users\Albert\Documents\Visual Studio 2017\Projects\NeuralNetwork UI\NeuralNetwork UI\obj\Debug\NeuralNetwork UI.csproj.ResolveComReference.cache

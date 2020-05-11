@@ -10,10 +10,6 @@ namespace Neuralt_netværk
 {
     class Manager
     {
-        /// <summary>
-        /// Fix vægt i forrige lag
-        /// ellers solid 70% succesrate!
-        /// </summary>
 
         private Application outputscoreapp;
         private FileStream ifs;
@@ -21,28 +17,26 @@ namespace Neuralt_netværk
         private BinaryReader lbr;
         private BinaryReader ibr;
         private int[] layerss;
-        private int counterGeneration;
-        private bool started;
         private NeuralNetwork network;
-        public void Startup() //string[] args
-        {
 
+        public void Startup() 
+        {
 
             outputscoreapp = new Application();
             Workbook wb = outputscoreapp.Workbooks.Add();
             Worksheet ws = wb.Worksheets.Add();
 
 
-
-            ifs = new FileStream("C:\\trainimages.idx3-ubyte", FileMode.Open); //loader imagestream
+            //loader imagestreams, hardcoded, HUSK ADMIN PRIVELEGES
+            ifs = new FileStream("C:\\trainimages.idx3-ubyte", FileMode.Open); 
             ibr = new BinaryReader(ifs);
 
             ibs = new FileStream("C:\\trainlabels.idx1-ubyte", FileMode.Open);
             lbr = new BinaryReader(ibs);
 
-            layerss = new int[] { 784, 36, 10 }; //ændret
+            layerss = new int[] { 784, 36, 10 }; //Strukturen for netværket defineres her
 
-            //Sørger for vi læser hvor end der er labels og billeder
+            //Sørger for vi læser hvor end der er labels og billeder (Første 4 4-bytes er headers)
             int aa = ibr.ReadInt32();
             aa = ibr.ReadInt32();
             aa = ibr.ReadInt32();
@@ -51,6 +45,7 @@ namespace Neuralt_netværk
             int bb = lbr.ReadInt32();
             bb = lbr.ReadInt32();
 
+            //initiere en instans af NeuralNetwork
             network = new NeuralNetwork(layerss);
 
             Engage();
@@ -58,16 +53,12 @@ namespace Neuralt_netværk
 
 
         }
-        //void EngageTest()
-        //{
-            
-        //}
+
         void Engage()
         {
             for (int a = 0; a < 60000; a++)
             {
-
-
+                //load billedet
                 byte[] pixels = new byte[28 * 28];
                 for (int i = 0; i < 28 * 28; i++)
                 {
@@ -76,18 +67,9 @@ namespace Neuralt_netværk
 
                 }
                 Currenttrainimage = pixels;
+                Currenttrainlabel = Convert.ToInt32(lbr.ReadByte());
 
-                byte label = lbr.ReadByte();
-                Currenttrainlabel = Convert.ToInt32(label);
-                //Console.WriteLine("Current image showing: " + Currenttrainlabel.ToString());
-
-
-
-
-
-
-
-
+                //compute de perfekte svar
                 List<float> expectvalueslist = new List<float>();
                 for (int i = 0; i < 10; i++)
                 {
@@ -101,8 +83,10 @@ namespace Neuralt_netværk
                         expectvalueslist.Add(0f);
                     }
                 }
-                network.BackPropogate(expectvalueslist.ToArray(), Currenttrainimage, 0);
-                //Check sucessrate
+                //backpropogate
+                network.BackPropogate(expectvalueslist.ToArray(), Currenttrainimage); 
+
+                //tæl successer
                 if (network.Bestguess == Currenttrainlabel.ToString())
                 {
                     network.success++;
@@ -110,12 +94,8 @@ namespace Neuralt_netværk
 
             }
 
-
-
             network.savebook();
             network.Save("TrainedNN.txt");
-
-
             Environment.Exit(1);
         }
         byte[] Currenttrainimage
@@ -128,19 +108,7 @@ namespace Neuralt_netværk
             get;
             set;
         }
-        public float[] OutputNN(NeuralNetwork n, byte[] input)
-        {
-            float[] f = new float[784];
-            for (int i = 0; i < input.Length; i++)
-            {
-                f[i] = Convert.ToSingle(input[i]) / 255;
 
-
-            }
-            float[] outputs = n.FeedForward(f);
-            return outputs;
-
-        }
 
     }
 }

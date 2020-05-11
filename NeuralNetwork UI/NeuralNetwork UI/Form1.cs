@@ -16,7 +16,13 @@ namespace NeuralNetwork_UI
     public partial class Form1 : Form
     {
 
-
+        NeuralNetwork network;
+        FileStream ifs;
+        BinaryReader ibr;
+        FileStream ibs;
+        BinaryReader lbr;
+        float counter;
+        float success;
 
         public Form1()
         {
@@ -26,26 +32,15 @@ namespace NeuralNetwork_UI
         private void Form1_Load(object sender, EventArgs e)
         {
             counter = 0;
-
         }
 
-
-
-
-
-
-        NeuralNetwork network;
-        FileStream ifs;
-        BinaryReader ibr;
-        FileStream ibs;
-        BinaryReader lbr;
         private void button1_Click_1(object sender, EventArgs e)
         {
             network = new NeuralNetwork(new int[] { 784, 36, 10 });
-            network.Load("TrainedNNN.txt");
+            network.Load("TrainedNNN.txt"); //hardcoded filsti
             MessageBox.Show("Succesfully loaded!");
 
-            ifs = new FileStream("C:\\testimages.idx3-ubyte", FileMode.Open); //loader imagestream
+            ifs = new FileStream("C:\\testimages.idx3-ubyte", FileMode.Open); //loader imagestream, hardcoded filsti
             ibr = new BinaryReader(ifs);
 
             int aa = ibr.ReadInt32();
@@ -53,58 +48,31 @@ namespace NeuralNetwork_UI
             aa = ibr.ReadInt32();
             aa = ibr.ReadInt32();
 
-            ibs = new FileStream("C:\\testlabels.idx1-ubyte", FileMode.Open);
+            ibs = new FileStream("C:\\testlabels.idx1-ubyte", FileMode.Open); //hardcoded filsti
             lbr = new BinaryReader(ibs);
             int bb = lbr.ReadInt32();
             bb = lbr.ReadInt32();
 
-
-
-
-
-
-
-
-
             imageList1.ImageSize = new Size(28, 28);
             listView1.View = View.LargeIcon;
-
-
         }
 
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-          
-        }
-        float counter;
-        float success;
         private void button2_Click(object sender, EventArgs e)
         {
-            
             byte[] pixels = new byte[28 * 28];
             for (int i = 0; i < 28 * 28; i++)
             {
-
                 pixels[i] = ibr.ReadByte();
-
             }
             float[] f = new float[784];
             for (int i = 0; i < pixels.Length; i++)
             {
                 f[i] = Convert.ToSingle(pixels[i]) / 255;
-
-
             }
             byte label = lbr.ReadByte();
             int actuallabel = Convert.ToInt32(label);
 
-            Image image = Image.FromFile(@"C:\\testing\" + counter.ToString() + ".png");
+            Image image = Image.FromFile(@"C:\\testing\" + counter.ToString() + ".png"); //hardcoded filsti
             pictureBox1.Image = image;
             float[] outputs = network.FeedForward(f);
 
@@ -125,14 +93,10 @@ namespace NeuralNetwork_UI
             {
                 imageList1.Images.Add(image);
 
-                    
 
                 this.listView1.View = View.LargeIcon;
                 this.imageList1.ImageSize = new Size(32, 32);
                 this.listView1.LargeImageList = this.imageList1;
-
-
-
 
 
                 ListViewItem item = new ListViewItem();
@@ -148,11 +112,6 @@ namespace NeuralNetwork_UI
 
                 this.listView1.Items.Add(item);
             }
-
-            //or 
-            //this.listView1.View = View.SmallIcon;
-            //this.listView1.SmallImageList = this.imageList1;
-
 
 
         }

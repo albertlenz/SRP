@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Neuralt netværk.exe" size="17384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Neuralt netværk.exe" size="16872">
       <assemblyIdentity name="Neuralt netværk" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N1wPpOYi3BaP12lrKOgJIzb/2B8SLNAdoAQH78yMVFQ=</dsig:DigestValue>
+        <dsig:DigestValue>r1dwimGP6shOxv8j0chVt5EH/uUs8CRoL41L5zf30zY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
