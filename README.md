@@ -18,9 +18,6 @@ Projektet er organiseret i følgende mapper og filer:
   *(Den fuldendte SRP gik tabt i studenterkørslen 😅)*
 
 - **`Neuralt netværk/`**  
-  Indeholder alle filer, scripts og ressourcer relateret til træning og evaluering af det neurale netværk.
+  Indeholder alle filer, scripts, executables, scores og øvrige ressourcer relateret til træning og evaluering af det neurale netværk.
   
-- **`NeuralNetwork UI/`**  
-  Indeholder kildekoden til brugergrænsefladen for det neurale netværk. *(Som desværre aldrig virkede 😅)*
-
 ---
