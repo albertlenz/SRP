@@ -12,14 +12,14 @@ https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown
 ## 📁 Projektstruktur
 
 Projektet er organiseret i følgende mapper og filer:
-
-- **`NeuralNetwork UI/`**  
-  Indeholder kildekoden til brugergrænsefladen for det neurale netværk. *(Som desværre aldrig virkede 😅)*
-  
-- **`Neuralt netværk/`**  
-  Indeholder scripts og ressourcer relateret til træning og evaluering af det neurale netværk.
   
 - **`SRP Albert Lenz Bærentsen ikke færdig.pdf`**  
   Den ufærdige version af SRP-rapporten, der dokumenterer projektets formål, metode og resultater.
+
+- **`Neuralt netværk/`**  
+  Indeholder scripts og ressourcer relateret til træning og evaluering af det neurale netværk.
+  
+- **`NeuralNetwork UI/`**  
+  Indeholder kildekoden til brugergrænsefladen for det neurale netværk. *(Som desværre aldrig virkede 😅)*
 
 ---
