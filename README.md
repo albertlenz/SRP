@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown
 Projektet er organiseret i følgende mapper og filer:
 
 - **`Neuralt netværk/`**  
-  Indeholder alle filer, scripts, executables, scores og øvrige ressourcer relateret til struktur, træningsmateriale, træning og evaluering af det neurale netværk.
+  Indeholder al kildekoden til det neurale netværk, inklusiv til træning, dataload, evaluering og test.
 
 - **`SRP Albert Lenz Bærentsen ikke færdig.pdf`**  
   En *næsten færdig* version af SRP-rapporten. *(Den fuldendte SRP gik tabt i studenterkørslen 😅)*
