@@ -1,6 +1,10 @@
 # SRP: Neurale Netværk til Genkendelse af Håndskrift
 
-Dette projekt er udviklet som en del af min Studieretningsprojekt (SRP) i 2020. Formålet var at kode en model, der kan identificere og klassificere håndskrevne tegn med høj nøjagtighed. Kodet efter konceptuel matematisk instruktion fra 3blue1Brown: https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown
+Dette projekt er det kodede produkt bag mit Studieretningsprojekt (SRP) i 2020. 
+
+Formålet var at kode en model, der kan identificere og klassificere håndskrevne tegn med høj nøjagtighed. 
+
+Kodet i C# efter konceptuel matematisk instruktion fra 3blue1Brown: https://www.youtube.com/watch?v=aircAruvnKk&ab_channel=3Blue1Brown.
 
 ---
 
