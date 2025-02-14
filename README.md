@@ -16,7 +16,7 @@ Projektet er organiseret i følgende mapper og filer:
 - **`Neuralt netværk/`**  
   Indeholder alle filer, scripts, executables, scores og øvrige ressourcer relateret til træning og evaluering af det neurale netværk.
 
-  - **`SRP Albert Lenz Bærentsen ikke færdig.pdf`**  
+- **`SRP Albert Lenz Bærentsen ikke færdig.pdf`**  
   En *næsten færdig* version af SRP-rapporten. *(Den fuldendte SRP gik tabt i studenterkørslen 😅)*
   
 ---
